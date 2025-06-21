@@ -1,0 +1,73 @@
+/*index*/
+@media screen and (min-width:501px) and (max-width:978px)
+{.container{max-width: 100%; height: 100%;}
+.imagenindex{max-width: 100%; height: 100%;}
+.opacidadindex{max-width: 100%; height: 100%;}
+.barraindex{max-width: 978px;}}
+
+/*header*/
+@media screen and (min-width:501px) and (max-width:978px)
+{.barra1{max-width: 100%; margin-left: 0px;}}
+
+/*footer*/
+@media screen and (min-width:501px) and (max-width:978px)
+{.footerf{margin-left: 6px;}}
+
+/*body historia*/
+@media screen and (min-width:501px) and (max-width: 978px) 
+{.gridhistoria {
+      display: grid;
+      grid-template-areas:
+        "video1 video1"
+        "mapa1 video2";
+      grid-template-columns: 49% 49%;
+      grid-template-rows: auto auto;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+      margin-top: 65px;
+      margin-bottom: 5px;
+      row-gap: 7px;}
+  
+    .videohistoriasantorini{max-width: 98%;}
+    .videosantorini {max-width: 95%;}
+    .mapasantorini {max-width: 95%;}}
+
+
+/*mobile comidas*/
+@media screen and (min-width:501px) and (max-width: 978px) 
+{.tarjetas{margin-left: 5px; width: 99%; margin-bottom: 10px;}
+.comida{max-width: 90%; margin-left: 11px;}}
+
+/*zona turistica*/
+@media screen and (min-width:501px) and (max-width: 978px) 
+{.mapaplaya{width: 100%;}
+.mapamuseo{width: 100%;}
+.mapavino{width: 100%;}}
+
+/*hoteles*/
+@media screen and (min-width:501px) and (max-width: 978px) 
+{.gridhoteles{display: grid;
+    grid-template-areas: 
+    "img1 img1"
+    "texto1 video2"
+    "img2  img2"
+    "video1 texto2";
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 500px  474px 500px 474px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 5px;
+    row-gap: 7px;}
+    
+.asha{max-width: 99%;}
+.hotel1{max-width: 95%; margin-right: 200px;}
+    
+.kastelli{max-width: 99%;}
+.hotel2{max-width: 95%; margin-right: 20px;}
+
+.hoteladronis{max-width: 100%; margin-left: 247px; height: 100%;}
+.hotelkastelli{max-width: 100%; margin-left: 8px; height: 100%;}}
+

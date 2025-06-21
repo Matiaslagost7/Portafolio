@@ -1,0 +1,29 @@
+/*Quitar bordes generados en la pagina*/
+*{margin:0px; 
+    padding:0px;
+    box-sizing: border-box;} 
+
+@import "partials/variables";
+@import "partials/index";
+@import "partials/comidas";
+@import "partials/historia";
+@import "partials/mobile";
+@import "partials/zonasturisticas";
+@import "partials/hoteles";
+@import "partials//tablet";
+
+/*footer*/
+footer{background-color: #3f79f0;
+    height: 25px;
+    width: 98%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-left: 11px;
+    margin-top: 10px;}
+
+.footer1{padding-top: 1px;}
+
+.letrafooter1{text-decoration: none;
+    color:aliceblue;
+    font-family: 'Dancing Script', cursive;}

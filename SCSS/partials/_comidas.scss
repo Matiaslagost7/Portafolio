@@ -1,0 +1,47 @@
+
+/*Fotos comidas*/
+.dolmas{margin-left: 0cm;
+    width: 200px;
+    height: 400px;}
+
+.dolmas1{list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;} 
+
+.humus{margin-right: 0cm;
+    margin-left: 0cm;
+    width: 450px;
+    height: 400px;}
+
+.humus1{list-style: none;
+     display: flex;
+    flex-direction: column;
+    text-align: center;}
+
+.kofta{width: 400px;
+    height: 400px;}
+    
+.kofta1{list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;}  
+
+/*Tarjetas comidas*/
+.card{justify-content: center;}
+
+.tarjetas{margin-left: 75px;
+margin-top: 40px;
+width: 90%;
+h1{font-size:x-large};
+h2{font-size:large};}
+
+.titulo1{text-align: center;}
+.titulo2{text-align: center}
+.titulo3{text-align: center}
+
+.preparacion{margin-top: 10px;}
+
+/*Imagenes*/
+.comida{height: 300px;
+    width: 100%;}

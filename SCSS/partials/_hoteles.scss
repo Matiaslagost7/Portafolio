@@ -1,0 +1,27 @@
+/*grid hoteles*/    
+.gridhoteles img{height: 500px; width: 99%;}   
+.gridhoteles video{height: 100%; width: 100%;}
+    
+.gridhoteles{display: grid;
+    grid-template-areas: 
+    "img1    img1"
+    "texto1  video2"
+    "img2     img2"
+    "video1  texto2";
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 500px  400px 500px 400px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 5px;
+    row-gap: 7px;}
+    
+.asha{grid-area: img1;}
+.hotel1{grid-area: texto1; width: 100%; h1{font-size:x-large}; h2{font-size:medium}; list-style-type: none;}
+    
+.kastelli{grid-area: img2;}
+.hotel2{grid-area: texto2; width: 100%; h1{font-size:x-large}; h2{font-size:medium}; list-style-type: none;}
+    
+.hoteladronis{grid-area: video2; margin-right: 12px; width: 100%;}
+.hotelkastelli{grid-area: video1; margin-left: 12px; width: 100%;}

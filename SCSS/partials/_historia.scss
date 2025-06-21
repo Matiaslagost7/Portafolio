@@ -1,0 +1,21 @@
+
+/*grid historia*/ 
+.gridhistoria video{height: 100%; width:100%;}
+.gridhistoria img{height: 100%; width: 100%;}
+
+.gridhistoria{display: grid;
+    grid-template-areas: 
+    "video1   video1"
+    "mapa1    video2";
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 400px 290px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 5px;
+    row-gap: 7px;}
+
+.videohistoriasantorini{grid-area: video1;}
+.videosantorini{grid-area: video2;}
+.mapasantorini{grid-area: mapa1;}
