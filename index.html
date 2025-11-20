@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Matias Lagos T.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header con Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary" href="#">Matias Lagos T.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Acerca de Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="me-2">LinkedIn</a>
+                    <a href="#" class="me-2">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero text-center">
+        <div class="container">
+            <img src="./images/foto perfil.jpg" alt="Foto de perfil" class="rounded-circle mb-3">
+            <h1 class="display-4">Hola, soy Matias Lagos T.</h1>
+            <p class="lead">Desarrollador apasionado por la tecnología y el diseño web.</p>
+            <a href="#projects" class="btn btn-light btn-lg">Ver Mis Proyectos</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Acerca de Mí</h2>
+                    <p>Breve descripción sobre mí. Soy un profesional con experiencia en desarrollo web, diseño y más. Aquí va un texto más detallado basado en tu contexto.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/300x200" alt="Imagen adicional" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Habilidades</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="skill card p-3 text-center">
+                        <h5>Desarrollo Web</h5>
+                        <p>HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="skill card p-3 text-center">
+                        <h5>Diseño UI/UX</h5>
+                        <p>Figma, Adobe XD</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="skill card p-3 text-center">
+                        <h5>Herramientas</h5>
+                        <p>Git, React</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-4">Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="project-card card">
+                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 1" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="project-card card">
+                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 2" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="project-card card">
+                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 3" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contactarme</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </form>
+                    <p class="mt-3 text-center">Enlaces: <a href="#">WhatsApp</a> | <a href="#">Email</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Matias Lagos T. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    }
+
+.hero {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    }
+       
+.hero img {
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    }
+
+.skill, .project-card {
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    }
+
+.skill:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    }
