@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Meta tags básicos para codificación, viewport responsivo y SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Matias Lagos T. Desarrollo web frontend, backend y habilidades blandas. Proyectos, contacto y experiencia." />
+    <meta name="theme-color" content="#0062cc">
+    <!-- Favicon genérico (puedes reemplazar por tu propio icono) -->
+    <link rel="icon" type="image/png" href="images/foto_perfil.jpg">
+    
     <title>Portafolio - Matias Lagos T.</title>
+    
+    <!-- Framework CSS Bootstrap 5.3 para diseño responsivo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fuente personalizada Montserrat desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Script JavaScript con defer para cargar después del HTML -->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header con Navbar de Bootstrap -->
+    <!-- ========== NAVBAR ==========
+         Barra de navegación fija en la parte superior con:
+         - Logo/nombre en la izquierda
+         - Menú de navegación con enlaces a las secciones
+         - Enlaces sociales (LinkedIn y GitHub) con iconos SVG
+         - Diseño responsivo con botón hamburguesa en móviles
+    -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-primary" href="#">Matias Lagos T.</a>
+            <a class="navbar-brand fw-bold text-primary" href="#hero">Matias Lagos T.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,134 +45,351 @@
                     <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
-                <div class="d-flex">
-                    <a href="#" class="me-2">LinkedIn</a>
-                    <a href="#" class="me-2">GitHub</a>
-                    <a href="#">Instagram</a>
+                <!-- Enlaces a redes sociales con iconos SVG -->
+                <div class="d-flex align-items-center social-nav">
+                    <a href="https://www.linkedin.com/in/matias-lagos-toledo" class="social-link" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg role="img" viewBox="0 0 448 512" class="social-svg"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340a53.79 53.79 0 1153.79-53.8 53.8 53.8 0 01-53.79 53.8zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.3 0-55.7 37.7-55.7 76.6V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.68-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                    </a>
+                    <a href="https://github.com/Matiaslagost7" class="social-link" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg role="img" viewBox="0 0 496 512" class="social-svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2 0-2-1.3-4.3-4.3-5.2-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.6 3.3 5.5 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-2.6-3.2-5.5-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.9 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.9-27.1 16.2-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.6-11.1-33.3 2.6-67.9 20.9-6.6 69 27 69 27 20-5.6 41.5-8.6 62.8-8.6s42.8 3 62.8 8.6c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.3 2.6 67.9 16 17.7 25.9 31.5 25.9 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.3 0 33.7-.3 75.4-.3 83.6 0 6.6 4.6 14.4 17.3 12.1C426.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero text-center">
-        <div class="container">
-            <img src="./images/foto perfil.jpg" alt="Foto de perfil" class="rounded-circle mb-3">
-            <h1 class="display-4">Hola, soy Matias Lagos T.</h1>
-            <p class="lead">Desarrollador apasionado por la tecnología y el diseño web.</p>
-            <a href="#projects" class="btn btn-light btn-lg">Ver Mis Proyectos</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2>Acerca de Mí</h2>
-                    <p>Breve descripción sobre mí. Soy un profesional con experiencia en desarrollo web, diseño y más. Aquí va un texto más detallado basado en tu contexto.</p>
+    <main id="main-content">
+        <!-- ========== HERO SECTION ==========
+             Sección de inicio con:
+             - Fondo azul con gradiente
+             - Foto de perfil con indicador de disponibilidad
+             - Título y descripción
+             - Tecnologías (Frontend, Backend, UI/UX)
+             - Botones para ver proyectos y contactar
+        -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <!-- Imagen de perfil con badge de disponibilidad -->
+                <div class="hero-image-wrapper">
+                    <img src="./images/foto_perfil.jpg" alt="Foto de perfil de Matias Lagos T." class="hero-image" loading="lazy" width="160" height="160">
+                    <!-- Badge animado que indica disponibilidad -->
+                    <div class="hero-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Disponible para proyectos</span>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://via.placeholder.com/300x200" alt="Imagen adicional" class="img-fluid rounded">
+                <!-- Título principal dividido en saludo y nombre -->
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hola, soy</span>
+                    <span class="hero-name">Matias Lagos T.</span>
+                </h1>
+                <!-- Subtítulo descriptivo -->
+                <p class="hero-subtitle">Desarrollador Full Stack apasionado por crear experiencias web innovadoras</p>
+                <!-- Tags de especialización -->
+                <div class="hero-tags">
+                    <span class="hero-tag">Frontend</span>
+                    <span class="hero-tag">Backend</span>
+                    <span class="hero-tag">UI/UX</span>
+                </div>
+                <!-- Botones de llamada a la acción (CTA) -->
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-hero btn-hero-primary">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                        Ver Proyectos
+                    </a>
+                    <a href="#contact" class="btn-hero btn-hero-secondary">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="margin-right: 8px;">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Contactar
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Habilidades</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="skill card p-3 text-center">
-                        <h5>Desarrollo Web</h5>
-                        <p>HTML, CSS, JavaScript</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="skill card p-3 text-center">
-                        <h5>Diseño UI/UX</h5>
-                        <p>Figma, Adobe XD</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="skill card p-3 text-center">
-                        <h5>Herramientas</h5>
-                        <p>Git, React</p>
+        <!-- ========== SECCIÓN ACERCA DE MÍ ==========
+             Información personal y profesional:
+             - Descripción del perfil profesional
+             - Experiencia y tecnologías que manejo
+             - Formación actual (Bootcamp)
+             - Objetivo profesional
+        -->
+        <section id="about" class="py-5 bg-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-4">Acerca de Mí</h2>
+                        <p class="mb-3">Soy un desarrollador web apasionado por crear experiencias digitales innovadoras y funcionales. Mi formación en desarrollo Full Stack me ha permitido dominar tanto el frontend como el backend, con un enfoque especial en tecnologías modernas y mejores prácticas de la industria.</p>
+                        <p class="mb-3">Cuento con experiencia en <strong>HTML5, CSS3, JavaScript, Bootstrap</strong> y <strong>Git</strong>. Me especializo en crear sitios web responsivos, accesibles y optimizados para SEO. Mi objetivo es seguir creciendo como desarrollador y contribuyendo a proyectos que generen un impacto positivo.</p>
+                        <p class="mb-3">Actualmente estoy cursando un Bootcamp de Desarrollo Full Stack, donde he fortalecido mis habilidades técnicas y de trabajo en equipo. Busco oportunidades para aplicar mis conocimientos en proyectos desafiantes que me permitan seguir aprendiendo y aportando valor.</p>
+                        <p class="text-center fw-semibold"><strong>Objetivo profesional:</strong> Convertirme en un desarrollador Full Stack Senior, liderando proyectos que integren soluciones innovadoras y contribuyan al crecimiento de empresas del sector TI.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-white">
+        <!-- ========== SECCIÓN DE HABILIDADES ==========
+             Organizada en 4 grupos:
+             1. Frontend: HTML5, CSS3, JavaScript, Bootstrap, Figma
+             2. Backend & BD: Python, Django, MySQL, POO
+             3. Herramientas: Git, GitHub
+             4. Habilidades Blandas: 9 soft skills con iconos SVG personalizados
+             Cada habilidad técnica muestra un logo desde DevIcons CDN
+        -->
+        <section id="skills" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Habilidades</h2>
+                <div class="skills-wrapper">
+                    <!-- Grupo de habilidades Frontend con logos -->
+                    <div class="skills-group" aria-labelledby="skills-frontend-title">
+                        <h3 id="skills-frontend-title" class="skills-title">Frontend</h3>
+                        <ul class="skills-list" role="list">
+                            <li class="skill-card" data-skill="HTML5">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Logo HTML5" loading="lazy">
+                                <span>HTML5</span>
+                            </li>
+                            <li class="skill-card" data-skill="CSS3">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Logo CSS3" loading="lazy">
+                                <span>CSS3</span>
+                            </li>
+                            <li class="skill-card" data-skill="JavaScript">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Logo JavaScript" loading="lazy">
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="skill-card" data-skill="Bootstrap">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Logo Bootstrap" loading="lazy">
+                                <span>Bootstrap</span>
+                            </li>
+                            <li class="skill-card" data-skill="Figma">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo Figma" loading="lazy">
+                                <span>Figma</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grupo de habilidades Backend y Bases de Datos -->
+                    <div class="skills-group" aria-labelledby="skills-backend-title">
+                        <h3 id="skills-backend-title" class="skills-title">Backend & BD</h3>
+                        <ul class="skills-list" role="list">
+                            <li class="skill-card" data-skill="Python">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Logo Python" loading="lazy">
+                                <span>Python</span>
+                            </li>
+                            <li class="skill-card" data-skill="Django">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Logo Django" loading="lazy">
+                                <span>Django</span>
+                            </li>
+                            <li class="skill-card" data-skill="MySQL">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Logo MySQL" loading="lazy">
+                                <span>MySQL</span>
+                            </li>
+                            <li class="skill-card" data-skill="POO">
+                                <div class="skill-fallback" aria-hidden="true">POO</div>
+                                <span>Programación Orientada a Objetos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grupo de herramientas de desarrollo -->
+                    <div class="skills-group" aria-labelledby="skills-tools-title">
+                        <h3 id="skills-tools-title" class="skills-title">Herramientas</h3>
+                        <ul class="skills-list" role="list">
+                            <li class="skill-card" data-skill="Git">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Logo Git" loading="lazy">
+                                <span>Git</span>
+                            </li>
+                            <li class="skill-card" data-skill="GitHub">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Logo GitHub" loading="lazy">
+                                <span>GitHub</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grupo de habilidades blandas con iconos SVG personalizados -->
+                    <div class="skills-group" aria-labelledby="skills-soft-title">
+                        <h3 id="skills-soft-title" class="skills-title">Habilidades Blandas</h3>
+                        <ul class="soft-list" role="list">
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4h12v8H9.2L6 15.2V12H4V4Z" fill="#007bff"/>
+                                        <path d="M18 8h2v10H8v-2h10V8Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Comunicación efectiva</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm10 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM4 20v-2.2c0-1.8 2.7-2.8 5.3-2.8s5.4 1 5.4 2.8V20H4Zm10 .02V17.8c0-.9-.4-1.7-1-2.4.6-.09 1.3-.16 2-.16 2.6 0 5.3 1 5.3 2.8V20h-6.3Z" fill="#007bff"/>
+                                    </svg>
+                                </span>
+                                <span>Trabajo en equipo</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 2h2v3h3v2h-3v3h-2V7H8V5h3V2Z" fill="#007bff"/>
+                                        <path d="M7 14a5 5 0 1 1 10 0 5 5 0 0 1-10 0Zm2 0a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Resolución de problemas</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3a7 7 0 0 1 7 7c0 2.7-1.3 4.2-3.2 6.1l-.8.8A3 3 0 0 0 14 19v1h-4v-1c0-.8-.3-1.6-.9-2.1l-.8-.8C6.6 14.2 5 12.7 5 10a7 7 0 0 1 7-7Z" fill="#007bff"/>
+                                        <path d="M11 22v-2h2v2h-2Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Adaptabilidad</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.7 3.2 1.9-.8 1.3-3.9-2.3V8h1.5v4.7Z" fill="#007bff"/>
+                                        <path d="M7.5 7.5h5v1.5h-5V7.5Zm0 2.5h2v1.5h-2V10Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Pensamiento crítico</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2a9 9 0 0 1 9 9c0 4.2-2.9 7.7-6.8 8.7V22h-4.4v-2.3A9 9 0 0 1 3 11a9 9 0 0 1 9-9Zm-.8 5.5v5l4.3 2.5.8-1.4-3.5-2V7.5h-1.6Z" fill="#007bff"/>
+                                    </svg>
+                                </span>
+                                <span>Gestión del tiempo</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 4c2.2 0 4.2 1.2 5.3 3.1A6.4 6.4 0 0 1 20 11.2c0 3.8-3 6.8-6.8 6.8H12c-3.8 0-6.8-3-6.8-6.8 0-3.8 3-6.8 6.8-6.8Zm0 2.2a4.6 4.6 0 0 0-4.6 4.6 4.6 4.6 0 0 0 4.6 4.6h1.2a4.6 4.6 0 0 0 4.6-4.6c0-.8-.2-1.5-.5-2.2-.7-1.3-2.1-2.4-3.7-2.4H12Z" fill="#007bff"/>
+                                        <path d="M12 9.2c.9 0 1.6.7 1.6 1.6a1.6 1.6 0 0 1-3.2 0c0-.9.7-1.6 1.6-1.6Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Responsabilidad</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 4h14v2H5V4Zm2 4h10v2H7V8Zm-2 4h14v2H5v-2Zm2 4h7v2H7v-2Z" fill="#007bff"/>
+                                        <path d="M15 16h4v2h-4v-2Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Aprendizaje continuo</span>
+                            </li>
+                            <li>
+                                <span class="soft-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2 9.5 8H3l5 3.8L5.5 18 12 14.2 18.5 18 16 11.8l5-3.8h-6.5L12 2Z" fill="#007bff"/>
+                                        <path d="M12 6.7 13.3 10h3.4l-2.7 2 1 3.1L12 13.1l-3 2 1-3.1-2.7-2h3.4L12 6.7Z" fill="#0056b3"/>
+                                    </svg>
+                                </span>
+                                <span>Liderazgo</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN DE PROYECTOS ==========
+             Muestra proyecto real de portafolio:
+             - Imagen de portada
+             - Título y descripción (problema/solución)
+             - Tecnologías utilizadas con badges
+             - Aprendizajes obtenidos
+             - Botones para ver el proyecto en vivo y el código fuente
+        -->
+        <section id="projects" class="py-5 bg-white">
         <div class="container">
             <h2 class="text-center mb-4">Proyectos</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="project-card card">
-                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 1" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Proyecto 1</h5>
-                            <p class="card-text">Descripción breve del proyecto.</p>
-                            <a href="#" class="btn btn-primary">Ver Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="project-card card">
-                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 2" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Proyecto 2</h5>
-                            <p class="card-text">Descripción breve del proyecto.</p>
-                            <a href="#" class="btn btn-primary">Ver Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="project-card card">
-                        <img src="https://via.placeholder.com/300x200" alt="Proyecto 3" class="card-img-top">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Proyecto 3</h5>
-                            <p class="card-text">Descripción breve del proyecto.</p>
-                            <a href="#" class="btn btn-primary">Ver Demo</a>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 mb-4">
+                    <!-- Tarjeta de proyecto: Ciberseguridad -->
+                    <div class="project-card card h-100">
+                        <img src="./images/Portada_ciberseguridad.png" alt="Captura del proyecto Protege tu Mundo Digital: Ciberseguridad" class="card-img-top" loading="lazy" width="800" height="200">
+                        <div class="card-body">
+                            <h5 class="card-title">Protege tu Mundo Digital: Ciberseguridad</h5>
+                            <p class="card-text mb-2"><strong>Problema:</strong> Crear un sitio educativo sobre ciberseguridad accesible para todo público.</p>
+                            <p class="card-text mb-2"><strong>Solución:</strong> Desarrollé un sitio web informativo con contenido estructurado sobre privacidad, protección de datos y navegación segura en internet.</p>
+                            <p class="card-text mb-3"><strong>Tecnologías:</strong> <span class="badge bg-primary">HTML5</span> <span class="badge bg-info">CSS3</span> <span class="badge bg-warning text-dark">JavaScript</span></p>
+                            <p class="card-text"><small><strong>Aprendizaje:</strong> Fortalecí mis conocimientos en diseño de sitios educativos y estructuración de contenido técnico para audiencias no especializadas.</small></p>
+                            <!-- Botones para ver proyecto en vivo y código fuente -->
+                            <div class="d-flex gap-2">
+                                <a href="https://matiaslagost7.github.io/M2_Evaluacion_del_modulo/index.html" target="_blank" class="btn btn-primary flex-fill">
+                                    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="vertical-align: text-bottom;">
+                                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                                    </svg>
+                                    Ver Proyecto
+                                </a>
+                                <a href="https://github.com/Matiaslagost7/M2_Evaluacion_del_modulo" target="_blank" class="btn btn-outline-secondary flex-fill" aria-label="Ver código en GitHub">
+                                    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="vertical-align: text-bottom;">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                    Código
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+        <!-- ========== SECCIÓN DE CONTACTO ==========
+             Formulario de contacto con validación:
+             - Campo nombre (mínimo 3 caracteres)
+             - Campo email (validación con regex)
+             - Campo mensaje (mínimo 10 caracteres)
+             - Validación en tiempo real (blur e input events)
+             - Mensaje de resultado (éxito/error)
+             - Enlaces adicionales (WhatsApp y Email)
+        -->
+        <section id="contact" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4">Contactarme</h2>
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
+                <div class="col-md-8 col-lg-6">
+                    <!-- Formulario con validación personalizada -->
+                    <form id="contactForm" novalidate>
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre" required>
+                            <label for="nombre" class="form-label">Nombre completo *</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required minlength="3" autocomplete="name">
+                            <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <label for="email" class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@correo.com" required autocomplete="email">
+                            <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required minlength="10" autocomplete="off"></textarea>
+                            <div class="invalid-feedback">Por favor escribe un mensaje (mínimo 10 caracteres).</div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
                     </form>
-                    <p class="mt-3 text-center">Enlaces: <a href="#">WhatsApp</a> | <a href="#">Email</a></p>
+                    <!-- Contenedor para mensajes de resultado del formulario -->
+                    <div id="formMessage" class="mt-3 text-center" style="display: none;" aria-live="polite" role="status"></div>
+                    <!-- Enlaces alternativos de contacto -->
+                    <p class="mt-4 text-center">
+                        <strong>Otros medios de contacto:</strong><br>
+                        <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" class="text-decoration-none">📱 WhatsApp</a> | 
+                        <a href="mailto:matias.lagos@example.com" class="text-decoration-none">📧 Email</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER ==========
+         Pie de página con copyright
+    -->
     <footer class="text-center py-3">
         <div class="container">
-            <p>&copy; 2023 Matias Lagos T. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Matias Lagos T. Todos los derechos reservados.</p>
         </div>
     </footer>
 
