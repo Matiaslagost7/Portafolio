@@ -15,34 +15,29 @@ Portafolio personal desarrollado con HTML, CSS (sin frameworks pesados) y Bootst
 - Imágenes con atributos `width` y `height` para evitar CLS (Layout Shift) en GitHub Pages.
 - Favicon y meta `theme-color` para mejorar apariencia en móviles.
 
-## Despliegue en GitHub Pages
-1. Haz commit y push de los cambios al branch `main`.
-2. Ve a: `Settings > Pages` en el repositorio.
-3. En **Build and deployment** selecciona:
-   - Source: `Deploy from a branch`
-   - Branch: `main` / folder: `/ (root)`
-4. Guarda y espera a que GitHub construya el sitio (puede tardar 1-2 minutos).
-5. La URL será: `https://<tu-usuario>.github.io/M8_AE2_ABP-Ejercicio-individual/`
 
-## Buenas prácticas para Pages
-- Usa rutas relativas (`./images/...`) como ya está implementado.
-- Evita recursos mixtos HTTP (todo es HTTPS).
-- Mantén nombres de archivos exactos (respeta mayúsculas/minúsculas).
-- No usar funciones JS que dependan de módulos o bundlers (no se usan aquí).
+## Instrucciones de uso
 
-## Cómo probar localmente (Windows PowerShell)
-```powershell
-# Abrir carpeta y servir con Python simple si lo tienes instalado
-cd "c:\Users\matia\Documents\Bootcamp\M8_AE2_ABP-Ejercicio individual"
-python -m http.server 8000
-# Luego visitar http://localhost:8000
-```
+1. **Clona el repositorio:**
+	```bash
+	git clone https://github.com/Matiaslagost7/M8_AE2_ABP-Ejercicio-individual.git
+	```
+2. **Abre la carpeta en tu editor o navegador:**
+	- Puedes abrir `index.html` directamente en tu navegador para ver el portafolio localmente.
+3. **Publicar en GitHub Pages:**
+	- Ve a la configuración del repositorio en GitHub.
+	- Busca la sección "Pages".
+	- Selecciona la rama `main` y la carpeta raíz (`/`).
+	- Guarda y accede a la URL que te proporciona GitHub Pages.
+
+## Dependencias
+
+- [Bootstrap 5.3 (CDN)](https://getbootstrap.com/): Para la grilla y componentes responsivos.
+- [Google Fonts: Montserrat](https://fonts.google.com/specimen/Montserrat): Fuente principal.
+- No requiere instalación de paquetes ni dependencias adicionales.
 
 ## Próximas mejoras sugeridas
 - Agregar sección de más proyectos.
 - Implementar envío real del formulario (servicio externo o backend ligero).
 - Optimizar imágenes (reducir peso con compresión).
 - Añadir archivo `404.html` para rutas rotas.
-
----
-Si necesitas convertir esto en versión más minimal aún, puedo ayudarte.
