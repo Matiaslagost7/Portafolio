@@ -2,6 +2,17 @@
 
 Portafolio personal desarrollado con HTML, CSS (sin frameworks pesados) y Bootstrap CDN para la grilla y componentes básicos.
 
+## Resumen del proceso de creación
+
+Este portafolio fue creado como parte de mi formación en desarrollo web, aplicando buenas prácticas de diseño, accesibilidad y optimización. El proceso incluyó:
+
+- **Planificación y diseño:** Bocetado en Figma y definición de la estructura de navegación y secciones.
+- **Desarrollo iterativo:** Implementación progresiva de las secciones principales (inicio, sobre mí, habilidades, proyectos y contacto), priorizando la experiencia de usuario y la adaptabilidad a dispositivos móviles.
+- **Optimización:** Compresión de imágenes, uso de formatos modernos (WebP), modularización de CSS y JavaScript, y mejoras en el rendimiento para despliegue en GitHub Pages.
+- **Accesibilidad:** Formularios accesibles, navegación con teclado y uso de atributos ARIA.
+
+El portafolio se mantiene actualizado con nuevos proyectos y aprendizajes adquiridos durante el bootcamp y experiencias profesionales.
+
 ## Estructura
 - `index.html`: Página principal.
 - `style.css`: Estilos personalizados optimizados para GitHub Pages.
@@ -15,10 +26,23 @@ Portafolio personal desarrollado con HTML, CSS (sin frameworks pesados) y Bootst
 - Imágenes con atributos `width` y `height` para evitar CLS (Layout Shift) en GitHub Pages.
 - Favicon y meta `theme-color` para mejorar apariencia en móviles.
 
+
 ## Proyectos Destacados
 
-- **Concesionaria:** Aplicación web para la gestión de una concesionaria de vehículos.
-  - **Presentación del diseño:** [Ver en Behance](https://www.behance.net/gallery/239101539/Portafolio-behance)
+- **Protege tu Mundo Digital: Ciberseguridad**
+	- Sitio educativo sobre ciberseguridad, privacidad y navegación segura.
+	- Tecnologías: HTML5, CSS3, JavaScript.
+	- [Ver proyecto](https://matiaslagost7.github.io/M2_Evaluacion_del_modulo/index.html) | [Código fuente](https://github.com/Matiaslagost7/M2_Evaluacion_del_modulo)
+
+- **Concesionaria**
+	- Sistema web para gestión de vehículos, clientes y ventas en una concesionaria de autos.
+	- Tecnologías: Python, CSS, HTML.
+	- [Ver proyecto](https://modulo6-concesionaria.onrender.com/) | [Código fuente](https://github.com/Matiaslagost7/Modulo6.Concesionaria) | [Diseño en Behance](https://www.behance.net/gallery/239101539/Portafolio-behance)
+
+- **Cafetería**
+	- Aplicación web para administración de productos y ventas en una cafetería.
+	- Tecnologías: Python, CSS, HTML.
+	- [Código fuente](https://github.com/Matiaslagost7/Modulo-6.-Cafeteria)
 
 ## Instrucciones de uso
 
