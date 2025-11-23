@@ -1,0 +1,203 @@
+/* ===== SKILLS SECTION ===== */
+/* Nuevo diseño habilidades */
+.skills-wrapper {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.skills-group {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.5rem 1.75rem 2rem;
+    box-shadow: 0 4px 18px -2px rgba(0,0,0,.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-group:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,rgba(0,123,255,.06),rgba(0,86,179,.06));
+    pointer-events: none;
+}
+
+.skills-title {
+    font-size: 1.05rem;
+    letter-spacing: .8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 1.2rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.skills-title:before {
+    content: "";
+    width: 28px;
+    height: 4px;
+    background: linear-gradient(90deg,#007bff,#00b1ff,#0056b3);
+    border-radius: 2px;
+}
+
+.skills-list, .soft-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem 1rem;
+}
+
+.skills-list {
+    grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+}
+
+.soft-list {
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+}
+
+/* ===== SOFT LIST ITEMS WITH ICONS ===== */
+.soft-list li {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.soft-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2fd;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.soft-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.soft-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.soft-list li:hover { transform: translateY(-3px); }
+
+.skill-card {
+    background: #fdfdfd;
+    border: 1px solid #e6e9ec;
+    border-radius: 12px;
+    padding: .9rem .7rem .75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .55rem;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    color: #2f3a44;
+    position: relative;
+    transition: all .28s ease;
+    isolation: isolate;
+}
+.skill-card {
+    background:#fdfdfd;
+    border:1px solid #e6e9ec;
+    border-radius:12px;
+    padding:.9rem .7rem .75rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.55rem;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.4px;
+    color:#2f3a44;
+    position:relative;
+}
+
+.skill-card:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg,#007bff,#00b1ff,#0056b3);
+    opacity: .85;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.skill-card img, .skill-card .skill-fallback {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+    transition: transform .4s cubic-bezier(.4,.16,.3,1), filter .4s;
+}
+.skill-card img, .skill-card .skill-fallback { width:48px; height:48px; object-fit:contain; }
+
+.skill-card .skill-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,#007bff,#0056b3);
+    color: #fff;
+    font-weight: 700;
+    font-size: .65rem;
+    border-radius: 10px;
+    letter-spacing: .8px;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px -6px rgba(0,123,255,.35);
+    border-color: #cdd9e4;
+}
+
+.skill-card:hover { transform:translateY(-4px); }
+
+.skill-card:hover img, .skill-card:hover .skill-fallback {
+    transform: scale(1.12) rotate(-2deg);
+    filter: drop-shadow(0 6px 12px rgba(0,123,255,.35));
+}
+.skill-card:hover img, .skill-card:hover .skill-fallback { transform:none; filter:none; }
+
+.skill-card span {
+    text-align: center;
+    line-height: 1.1;
+    user-select: none;
+}
+
+/* ===== SOFT SKILLS TAGS ===== */
+.soft-skills li {
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: all .3s ease;
+    border: 1px solid #e6e6e6;
+}
+
+.soft-skills li:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,123,255,0.35);
+    border-color: #007bff;
+}

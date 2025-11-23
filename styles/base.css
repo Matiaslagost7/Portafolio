@@ -1,0 +1,31 @@
+/* ========================================
+   ESTILOS BASE - ENFOQUE MOBILE FIRST
+   ========================================
+   Reset de estilos y configuración global
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fuente personalizada */
+    background-color: #f8f9fa; /* Gris claro */
+    color: #333; /* Texto oscuro */
+    line-height: 1.6; /* Espaciado de líneas legible */
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+html { scroll-behavior:smooth; }
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 60px 20px !important;
+}
+section { scroll-margin-top:80px; }
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
