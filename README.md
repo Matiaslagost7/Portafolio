@@ -15,12 +15,16 @@ Portafolio personal desarrollado con HTML, CSS (sin frameworks pesados) y Bootst
 - Imágenes con atributos `width` y `height` para evitar CLS (Layout Shift) en GitHub Pages.
 - Favicon y meta `theme-color` para mejorar apariencia en móviles.
 
+## Proyectos Destacados
+
+- **Concesionaria:** Aplicación web para la gestión de una concesionaria de vehículos.
+  - **Presentación del diseño:** [Ver en Behance](https://www.behance.net/gallery/239101539/Portafolio-behance)
 
 ## Instrucciones de uso
 
 1. **Clona el repositorio:**
 	```bash
-	git clone https://github.com/Matiaslagost7/M8_AE2_ABP-Ejercicio-individual.git
+	git clone https://github.com/Matiaslagost7/Portafolio.git
 	```
 2. **Abre la carpeta en tu editor o navegador:**
 	- Puedes abrir `index.html` directamente en tu navegador para ver el portafolio localmente.
