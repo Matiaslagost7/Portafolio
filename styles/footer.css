@@ -6,9 +6,11 @@
     margin-top: 4rem;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-logo {
@@ -21,6 +23,20 @@ footer p {
 
 .footer-logo span {
     color: var(--primary-color);
+}
+
+.footer-text {
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .social-links a {
@@ -41,4 +57,8 @@ footer p {
     margin-top: 2rem;
     width: 100%;
     font-size: .9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
 }

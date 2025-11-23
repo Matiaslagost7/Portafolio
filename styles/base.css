@@ -20,6 +20,14 @@
     --shadow-color-light: rgba(0, 0, 0, 0.1);
     --shadow-color-primary: rgba(0, 123, 255, 0.3);
     --main-font: 'Montserrat', sans-serif;
+    /* Nuevas variables agregadas tras la refactorización */
+    --footer-bg-color: #1a1a1a;
+    --footer-text-color: #ccc;
+    --footer-border-color: #333;
+    --tag-bg-color: #e7f3ff;
+    --input-bg-color: #f8f9fa;
+    --shadow-color-dark: rgba(0,0,0,0.15);
+    --light-text-color: #666;
 }
 
 * {
