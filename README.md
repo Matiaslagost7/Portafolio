@@ -40,8 +40,18 @@ Portafolio personal desarrollado con HTML, CSS (sin frameworks pesados) y Bootst
 - [Google Fonts: Montserrat](https://fonts.google.com/specimen/Montserrat): Fuente principal.
 - No requiere instalación de paquetes ni dependencias adicionales.
 
-## Próximas mejoras sugeridas
-- Agregar sección de más proyectos.
-- Implementar envío real del formulario (servicio externo o backend ligero).
-- Optimizar imágenes (reducir peso con compresión).
-- Añadir archivo `404.html` para rutas rotas.
+## Problemáticas Detectadas y Mejoras Aplicadas
+
+Se identificaron áreas de mejora en el proyecto y se aplicaron las siguientes soluciones:
+
+- **Optimización de imágenes:**
+  - **Problemática:** Las imágenes de alta resolución ralentizaban la carga del sitio.
+  - **Solución:** Se comprimieron las imágenes para reducir su peso sin una pérdida notable de calidad. Se considera el uso de formatos modernos como WebP para futuras actualizaciones, que ofrecen una compresión superior a JPEG y PNG.
+
+- **Refactorización y organización de CSS:**
+  - **Problemática:** El archivo `style.css` podía volverse difícil de mantener a medida que el proyecto creciera.
+  - **Solución:** Se recomienda dividir el CSS en archivos más pequeños y específicos (por ejemplo, `header.css`, `projects.css`) e importarlos en un archivo principal para mejorar la modularidad.
+
+- **Modularidad en JavaScript:**
+  - **Problemática:** Un único archivo JavaScript para toda la interactividad puede dificultar la depuración y escalabilidad.
+  - **Solución:** Se sugiere dividir el código JavaScript en módulos que manejen funcionalidades específicas (ej. un módulo para el carrusel, otro para el formulario). Esto facilita el mantenimiento y asegura que el sitio permanezca funcional si JavaScript está deshabilitado.
