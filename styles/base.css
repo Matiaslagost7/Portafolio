@@ -3,6 +3,25 @@
    ========================================
    Reset de estilos y configuración global
    ======================================== */
+
+:root {
+    --primary-color: #007bff;
+    --primary-dark-color: #0056b3;
+    --primary-gradient: linear-gradient(135deg, #0062cc, #004085);
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-bg-color: #f8f9fa;
+    --white-color: #ffffff;
+    --dark-text-color: #333;
+    --body-bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color-light: rgba(0, 0, 0, 0.1);
+    --shadow-color-primary: rgba(0, 123, 255, 0.3);
+    --main-font: 'Montserrat', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +29,9 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* Fuente personalizada */
-    background-color: #f8f9fa; /* Gris claro */
-    color: #333; /* Texto oscuro */
+    font-family: var(--main-font); /* Fuente personalizada */
+    background-color: var(--body-bg-color); /* Gris claro */
+    color: var(--dark-text-color); /* Texto oscuro */
     line-height: 1.6; /* Espaciado de líneas legible */
     overflow-x: hidden; /* Evita scroll horizontal */
 }

@@ -47,20 +47,20 @@ function showValid(field) {
  * Muestra un mensaje de estado (éxito o error) para el formulario.
  * @param {string} type - 'success' o 'error'.
  * @param {string} text - El mensaje a mostrar.
+ * @param {HTMLElement} messageDiv - El elemento donde mostrar el mensaje.
  */
-function showFormMessage(type, text) {
-    const messageDiv = document.getElementById('formMessage');
+function showFormMessage(type, text, messageDiv) {
     messageDiv.className = `mt-3 text-center alert alert-${type === 'success' ? 'success' : 'danger'}`;
     messageDiv.textContent = text;
     messageDiv.style.display = 'block';
 
     setTimeout(() => {
         messageDiv.style.display = 'none';
-    }, 5000);
+    }, 6000);
 }
 
 /**
- * Inicializa la validación del formulario de contacto.
+ * Inicializa la validación y el envío AJAX del formulario de contacto.
  */
 function initFormValidation() {
     const contactForm = document.getElementById('contactForm');
@@ -69,50 +69,71 @@ function initFormValidation() {
     const nameField = document.getElementById('nombre');
     const emailField = document.getElementById('email');
     const messageField = document.getElementById('mensaje');
+    const formMessage = document.getElementById('formMessage');
+    const submitButton = contactForm.querySelector('.btn-submit');
 
-    nameField.addEventListener('blur', () => {
-        if (!isTextValid(nameField.value, 3)) {
-            showError(nameField, 'El nombre debe tener al menos 3 caracteres.');
-        } else {
-            showValid(nameField);
+    const validateField = (field, minLength, errorMessage, emailValidation = false) => {
+        const value = field.value;
+        if (!isTextValid(value, 1)) {
+            showError(field, 'Este campo es obligatorio.');
+            return false;
         }
-    });
-
-    emailField.addEventListener('blur', () => {
-        if (!isTextValid(emailField.value, 1)) {
-            showError(emailField, 'El correo es obligatorio.');
-        } else if (!isEmailValid(emailField.value)) {
-            showError(emailField, 'Por favor ingresa un correo electrónico válido.');
-        } else {
-            showValid(emailField);
+        if (emailValidation && !isEmailValid(value)) {
+            showError(field, 'Por favor ingresa un correo electrónico válido.');
+            return false;
         }
-    });
-
-    messageField.addEventListener('blur', () => {
-        if (!isTextValid(messageField.value, 10)) {
-            showError(messageField, 'El mensaje debe tener al menos 10 caracteres.');
-        } else {
-            showValid(messageField);
+        if (!isTextValid(value, minLength)) {
+            showError(field, errorMessage);
+            return false;
         }
-    });
+        showValid(field);
+        return true;
+    };
 
-    contactForm.addEventListener('submit', (e) => {
+    nameField.addEventListener('blur', () => validateField(nameField, 3, 'El nombre debe tener al menos 3 caracteres.'));
+    emailField.addEventListener('blur', () => validateField(emailField, 1, '', true));
+    messageField.addEventListener('blur', () => validateField(messageField, 10, 'El mensaje debe tener al menos 10 caracteres.'));
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const isNameValid = isTextValid(nameField.value, 3);
-        const isEmailValidValue = isEmailValid(emailField.value);
-        const isMessageValid = isTextValid(messageField.value, 10);
+        const isNameValid = validateField(nameField, 3, 'El nombre debe tener al menos 3 caracteres.');
+        const isEmailValid = validateField(emailField, 1, '', true);
+        const isMessageValid = validateField(messageField, 10, 'El mensaje debe tener al menos 10 caracteres.');
 
-        if (isNameValid) showValid(nameField); else showError(nameField, 'El nombre debe tener al menos 3 caracteres.');
-        if (isEmailValidValue) showValid(emailField); else showError(emailField, 'Por favor ingresa un correo electrónico válido.');
-        if (isMessageValid) showValid(messageField); else showError(messageField, 'El mensaje debe tener al menos 10 caracteres.');
+        if (!isNameValid || !isEmailValid || !isMessageValid) {
+            showFormMessage('error', 'Por favor corrige los errores antes de enviar.', formMessage);
+            return;
+        }
 
-        if (isNameValid && isEmailValidValue && isMessageValid) {
-            showFormMessage('success', '¡Mensaje enviado con éxito! Gracias por contactarme.');
-            contactForm.reset();
-            [nameField, emailField, messageField].forEach(field => field.classList.remove('is-valid'));
-        } else {
-            showFormMessage('error', 'Por favor corrige los errores antes de enviar.');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                showFormMessage('success', '¡Mensaje enviado con éxito! Gracias por contactarme.', formMessage);
+                contactForm.reset();
+                [nameField, emailField, messageField].forEach(field => field.classList.remove('is-valid', 'is-invalid'));
+            } else {
+                const data = await response.json();
+                const errorMessage = data.errors ? data.errors.map(err => err.message).join(', ') : 'No se pudo enviar el mensaje.';
+                showFormMessage('error', `Error: ${errorMessage}`, formMessage);
+            }
+        } catch (error) {
+            showFormMessage('error', 'Hubo un problema con la red. Por favor, inténtalo de nuevo.', formMessage);
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Enviar Mensaje';
         }
     });
 }

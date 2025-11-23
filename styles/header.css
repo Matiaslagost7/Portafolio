@@ -3,7 +3,7 @@
    ======================================== */
 /* Estilos simples para la barra de navegación fija superior */
 .navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px var(--shadow-color-light);
 }
 
 .navbar-brand {
@@ -19,35 +19,35 @@
     height: 38px;
     margin-left: 6px;
     border-radius: 50%;
-    background: #ffffff;
-    color: #007bff;
+    background: var(--white-color);
+    color: var(--primary-color);
     font-size: 1.1rem;
     transition: all .3s ease;
-    border: 1px solid #e2e6ea;
+    border: 1px solid var(--border-color);
     text-decoration: none;
 }
 
 .social-nav .social-link:focus-visible {
-    outline: 2px solid #0056b3;
+    outline: 2px solid var(--primary-dark-color);
     outline-offset: 2px;
 }
 
 .social-nav .social-link .social-svg {
     width: 20px;
     height: 20px;
-    fill: #007bff;
+    fill: var(--primary-color);
     transition: fill .3s ease;
 }
 
 .social-nav .social-link:hover {
-    background: #007bff;
+    background: var(--primary-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,123,255,0.3);
-    border-color: #007bff;
+    box-shadow: 0 6px 18px var(--shadow-color-primary);
+    border-color: var(--primary-color);
 }
 
 .social-nav .social-link:hover .social-svg {
-    fill: #ffffff;
+    fill: var(--white-color);
 }
 
 .social-nav .social-link:active {

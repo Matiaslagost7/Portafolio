@@ -13,3 +13,23 @@
     section h2 { font-size:2.3rem; }
     .project-card img { height:240px; }
 }
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        background: var(--white-color);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: 1rem;
+        box-shadow: 0 10px 25px -5px var(--shadow-color-dark);
+    }
+
+    .navbar-nav .nav-link {
+        padding: .7rem 1rem;
+        border-radius: 6px;
+    }
+
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+        background-color: var(--tag-bg-color);
+        color: var(--primary-color);
+    }
+}
